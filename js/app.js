@@ -1,5 +1,30 @@
 // let clickCounter = 0;
 // let countField = $('#count');
+$(function() {
+    let data = {
+        ID: 0,
+        cats: []
+    };
+
+
+    let octopus = {
+
+    };
+
+    
+    let viewButtons = {
+
+    };
+
+
+    let viewDisplay = {
+
+    };
+
+
+    octopus.init();
+}());
+
 
 // function addOne () {
 
