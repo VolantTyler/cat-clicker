@@ -40,6 +40,7 @@ let octopus = {
 
         viewButtons.init();
         viewDisplay.init();
+        viewAdmin.init();
     },
 
     catsArray: function() {
@@ -58,8 +59,10 @@ let octopus = {
         model.currentCat.clickCount++;
         viewDisplay.render();
     },
+
     adminShowHide: function() {
-        //TODO: create function
+        //TODO: create function #adminPanel
+        $('#adminPanel').toggle();
     }
 };
 
