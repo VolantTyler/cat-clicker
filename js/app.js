@@ -79,6 +79,7 @@ let octopus = {
         model.currentCat.url = $('#catUrl').val();
         model.currentCat.clickCount = $('#catClicks').val();
 
+        viewButtons.render();
         viewDisplay.render();
     }
 };
