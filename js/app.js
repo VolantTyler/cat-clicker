@@ -72,6 +72,14 @@ let octopus = {
 
     adminHide: function() {
         $('#adminPanel').hide();
+    },
+
+    update: function() {
+        model.currentCat.name = $('#catName').val();
+        model.currentCat.url = $('#catUrl').val();
+        model.currentCat.clickCount = $('#catClicks').val();
+
+        viewDisplay.render();
     }
 };
 
@@ -149,12 +157,13 @@ let viewAdmin = {
         });
 
         this.cancelButton.addEventListener('click', function () {
-            octopus.adminShowHide();
+            octopus.adminHide();
         });
 
         this.saveButton.addEventListener('click', function () {
             //octopus update model with input text
-            octopus.adminShowHide();
+            octopus.update();
+            octopus.adminHide();
         });
 
         octopus.adminHide();
