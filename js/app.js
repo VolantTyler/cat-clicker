@@ -66,7 +66,12 @@ let octopus = {
     },
 
     adminShowHide: function() {
+        //tried to do this with assign var in .init()
         $('#adminPanel').toggle();
+    },
+
+    adminHide: function() {
+        $('#adminPanel').hide();
     }
 };
 
@@ -128,6 +133,7 @@ let viewDisplay = {
 
 let viewAdmin = {
     init: function() {
+
         //buttons
         this.adminButton = document.getElementById('admin');
         this.cancelButton = document.getElementById('cancel');
@@ -151,11 +157,11 @@ let viewAdmin = {
             octopus.adminShowHide();
         });
 
+        octopus.adminHide();
         this.render();
     },
 
     render: function() {
-        //fill in input sections with current cat values
         let cat = octopus.getCurrentCat();
 
         this.nameInput.value = cat.name;
