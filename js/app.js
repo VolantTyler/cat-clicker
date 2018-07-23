@@ -111,6 +111,7 @@ let viewDisplay = {
 
         this.displayImage.addEventListener('click', function() {
             octopus.countPlusOne();
+            viewAdmin.render();
         });
         
         this.render();
@@ -122,7 +123,6 @@ let viewDisplay = {
         this.displayName.textContent = cat.name;
         this.displayImage.src = cat.image;
         this.displayCount.textContent = cat.clickCount;
-
     }
 };
 
