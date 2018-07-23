@@ -92,6 +92,7 @@ let viewButtons = {
                 return function() {
                     octopus.setCurrentCat(catCopy);
                     viewDisplay.render();
+                    viewAdmin.render();
                 };
             })(cat));
 
@@ -133,9 +134,8 @@ let viewAdmin = {
         this.saveButton = document.getElementById('save');
 
         //inputs
-        //something here broke the program
         this.nameInput = document.getElementById('catName');
-        this.urlInput = document.getElementById('catURL');
+        this.urlInput = document.getElementById('catUrl');
         this.clicksInput = document.getElementById('catClicks');
 
         this.adminButton.addEventListener('click', function() {
@@ -159,8 +159,8 @@ let viewAdmin = {
         let cat = octopus.getCurrentCat();
 
         this.nameInput.value = cat.name;
+        this.urlInput.value = cat.url;
         this.clicksInput.value = cat.clickCount;
-       // console.log('hello');
     }
 };
 
