@@ -5,27 +5,32 @@ let model = {
     cats: [
     {
         name: 'Cat1',
+        url: 'apple.com',
         clickCount: 0,
         //note first is .jpg, rest are .jpeg
         image: 'images/cat_picture1.jpg'
     },
     {
         name: 'Cat2',
+        url: 'google.com',
         clickCount: 0,
         image: 'images/cat_picture2.jpeg'
     },
     {
         name: 'Cat3',
+        url: 'facebook.com',
         clickCount: 0,
         image: 'images/cat_picture3.jpeg'
     },
     {
         name: 'Cat4',
+        url: 'amazon.com',
         clickCount: 0,
         image: 'images/cat_picture4.jpeg'
     },
     {
         name: 'Cat5',
+        url: 'microsoft.com',
         clickCount: 0,
         image: 'images/cat_picture5.jpeg'
     }
