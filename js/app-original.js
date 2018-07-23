@@ -57,9 +57,6 @@ let octopus = {
     countPlusOne: function() {
         model.currentCat.clickCount++;
         viewDisplay.render();
-    },
-    adminShowHide: function() {
-        //TODO: create function
     }
 };
 
@@ -115,16 +112,6 @@ let viewDisplay = {
         this.displayImage.src = cat.image;
         this.displayCount.textContent = cat.clickCount;
 
-    }
-};
-
-let viewAdmin = {
-    init: function() {
-        this.adminButton = document.getElementById('admin');
-
-        this.adminButton.addEventListener('click', function() {
-            octopus.adminShowHide();
-        });
     }
 };
 
