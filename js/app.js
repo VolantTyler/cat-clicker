@@ -61,7 +61,6 @@ let octopus = {
     },
 
     adminShowHide: function() {
-        //TODO: create function #adminPanel
         $('#adminPanel').toggle();
     }
 };
@@ -123,11 +122,40 @@ let viewDisplay = {
 
 let viewAdmin = {
     init: function() {
+        //buttons
         this.adminButton = document.getElementById('admin');
+        this.cancelButton = document.getElementById('cancel');
+        this.saveButton = document.getElementById('save');
+
+        //inputs
+        //something here broke the program
+        this.nameInput = document.getElementById('catName');
+        this.urlInput = document.getElementById('catURL');
+        this.clicksInput = document.getElementById('catClicks');
 
         this.adminButton.addEventListener('click', function() {
             octopus.adminShowHide();
         });
+
+        this.cancelButton.addEventListener('click', function () {
+            octopus.adminShowHide();
+        });
+
+        this.saveButton.addEventListener('click', function () {
+            //octopus update model with input text
+            octopus.adminShowHide();
+        });
+
+        this.render();
+    },
+
+    render: function() {
+        //fill in input sections with current cat values
+        let cat = octopus.getCurrentCat();
+
+        this.nameInput.value = cat.name;
+        this.clicksInput.value = cat.clickCount;
+       // console.log('hello');
     }
 };
 
