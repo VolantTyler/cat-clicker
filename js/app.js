@@ -162,7 +162,6 @@ let viewAdmin = {
         });
 
         this.saveButton.addEventListener('click', function () {
-            //octopus update model with input text
             octopus.update();
             octopus.adminHide();
         });
